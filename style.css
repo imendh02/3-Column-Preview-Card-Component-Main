@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+:root {
+    --Very-light-gray:hsl(0, 0%, 95%);
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white:hsla(0, 0%, 100%, 0.75);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color:var(--Very-light-gray);
+}
+.container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    width: 55vw;
+}
+.card {
+    display: flex;
+}
+.card-1 {
+    background-color: var(--Bright-orange);
+    border-radius: 10px 0 0 10px;
+}
+.card-2 {
+    background-color: var(--Dark-cyan);
+}
+.card-3 {
+    background-color: var(--Very-dark-cyan);
+    border-radius: 0 10px 10px 0;
+}
+.card-1,.card-2,.card-3 {
+    padding: 40px;
+}
+.card-1 h1,.card-2 h1,.card-3 h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    color:var(--Very-light-gray);
+    padding: 25px 0 25px 0;
+}
+.card-1 p,.card-2 p,.card-3 p {
+    font-family: 'Lexend Deca', sans-serif;
+    color:var(--Transparent-white);
+    Font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 70px;
+} 
+.card-1 button,.card-2 button,.card-3 button {
+    padding: 15px 35px 15px 35px;
+    border-radius: 40px;
+    border:inherit;
+    text-align: center;
+    font-size: 15px;
+    background-color: var(--Very-light-gray);
+}
+.card-1 button {
+    color:var(--Bright-orange);
+}
+.card-2 button {
+    color:var(--Dark-cyan);
+}
+.card-2 button {
+    color:var(--Very-dark-cyan);
+}
+.card-1 button:hover,.card-2 button:hover,.card-3 button:hover {
+    background: transparent;
+    color:var(--Very-light-gray);
+    border: 2px solid var(--Very-light-gray);
+}
+.attribution {
+    position: absolute;
+    bottom: 20px;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    font-size: 15px;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+/*Responsive*/
+@media (max-width:375px) {
+    .container {
+        width: 90vw;
+    }
+    .card {
+        flex-direction: column;
+    }
+    .card-1 {
+        border-radius: 10px 10px 0 0;
+    }
+    .card-3 {
+        border-radius:0 0 10px 10px;
+    }
+    .card-1 p,.card-2 p,.card-3 p{
+        margin-bottom: 20px;
+    }
+}
